@@ -6,9 +6,9 @@
 @endsection
 
 @section('content')
-    <p>ここが本文のコンテンツ</p>
-<p>Controller value<br>'message' = {{$message}}</p>
-<p>ViewComposer value<br>'view_message' = {{$view_message}}</p>
+<p>ここが本文のコンテンツ</p>
+<p>これは、<middleware>google.com</middleware>へのリンクです</p>
+<p>これは、<middleware>yahoo.co.jp</middleware>へのリンクです</p>
 
 @endsection
 
