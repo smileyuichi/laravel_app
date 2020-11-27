@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('hello/{msg}',function($msg){
+Route::get('hello/{id}/{user_name?}',function($id,$user_name='no name'){
     $html = <<<EOF
 <html>
 <head>
@@ -29,9 +29,10 @@ h1 { font-size:100px; text-align:right; color:#eee; margin:-40px 0 -50px 0; }
 </style>
 </head>
 <body>
-<h1>Hello</h1>
-<p>{$msg}</p>
-<p>これはサンプルで作ったページ</p>
+<h1>ユーザー確認</h1>
+<p>id:{$id}</p>
+<p>name:{$user_name}</p>
+<p>認証しました</p>
 </body>
 </html>
 EOF;
