@@ -9,16 +9,13 @@ class HelloController extends Controller
 {
     public function index() {
         $data=[
-            'msg'=>'お名前を入力して下さい'
+            ['name'=>'yamada','mail'=>'example@'],
+            ['name'=>'ito','mail'=>'example@'],
+            ['name'=>'ueda','mail'=>'example@'],
         ];
-        $array=[1,2,3,4,5];
-        return view('hello.index',['array'=>$array]);
+
+        return view('hello.index',['data'=>$data]);
         }
 
-    public function post(Request $request) 
-    {
-        $array =[1,2,3,4,5];
-        return view('hello.index',['msg'=>$request->msg,'array'=>$array]);
-    }
 
 }
