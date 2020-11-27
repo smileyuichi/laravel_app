@@ -20,4 +20,4 @@ use App\Http\Controllers\HelloController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('hello',[HelloController::class,'index']);
+Route::get('hello/',[HelloController::class,'index']);
